@@ -13,46 +13,43 @@ the information it provides us.
 The information that you should obtain from the API of each section is as 
 follows:
 
-## INFO TO SHOW:
+## EPISODES
+🠲 Information about the chapters of R&M:
+- [ ] Name
+- [ ] Air date
+- [ ] Episode code (ex: S01E01)
 
-# EPISODES
-    => Information about the chapters of R&M:
-    - [ ] Name
-    - [ ] Air date
-    - [ ] Episode code (ex: S01E01)
-
-# CHARACTERS
-    => Information about the characters of R&M:
-    - [ ] Name
-    - [ ] Status
-    - [ ] Species
-    - [ ] Gender
-    - [ ] Image
-    - [ ] Origin name (ex: Earth C-137):
-        - With a button with detailed info about the origin location in the main
-        - [ ] Location name, type and dimension
-        - [ ] Resident list
-    - [ ] Episodes where the character appears ( episode name + code )
+## CHARACTERS
+🠲 Information about the characters of R&M:
+- [ ] Name
+- [ ] Status
+- [ ] Species
+- [ ] Gender
+- [ ] Image
+- [ ] Origin name (ex: Earth C-137):
+    - With a button with detailed info about the origin location in the main
+    - [ ] Location name, type and dimension
+    - [ ] Resident list
+- [ ] Episodes where the character appears ( episode name + code )
 
 
-# LOCATIONS
-    => Information about the locations of R&M:
-    - [ ] Name
-    - [ ] Type
-    - [ ] Dimension
+## LOCATIONS
+🠲 Information about the locations of R&M:
+- [ ] Name
+- [ ] Type
+- [ ] Dimension
 
-# WEB STRUCTURE
-    - [ ] Header with project title
-    - [ ] Sidebar with: List of episodes + button to load next page of episodes
-    - [ ] Main container
+## WEB STRUCTURE
+- [ ] Header with project title
+- [ ] Sidebar with: List of episodes + button to load next page of episodes
+- [ ] Main container
 
-## IDEAS
+### IDEAS
 1. Make character creator.
 2. Random generators.
 3. Visual representation of API connections.
 
 
-#RESOURCES 
-
-[Documentation](https://rickandmortyapi.com/documentation/)
+### RESOURCES 
+[Documentation](https://rickandmortyapi.com/documentation/)   
 [Git](https://github.com/afuh/rick-and-morty-api-site)
