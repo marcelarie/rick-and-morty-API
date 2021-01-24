@@ -1,0 +1,6 @@
+/* @import './file.css'; */
+@import './header.css';
+
+:root {
+    --black: #282828;
+}
