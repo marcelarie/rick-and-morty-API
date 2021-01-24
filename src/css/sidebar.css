@@ -1,0 +1,8 @@
+.sidebar {
+    font-size: 1.1em;
+    background-color: lightblue;
+}
+.sidebar__episodes {
+    display: flex;
+    list-style: none;
+}
