@@ -1,0 +1,10 @@
+
+.character {
+    flex: 1;
+    padding: 1em;
+    text-align: center;
+}
+.character img {
+    width: 150px;
+    border-radius: 5px;
+}

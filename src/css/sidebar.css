@@ -1,6 +1,7 @@
 .sidebar {
     font-size: 1.2em;
     color: var(--white);
+    float: left;
 }
 .sidebar__seasons {
     display: flex;
@@ -14,6 +15,9 @@
     text-align: center;
     width: 15vw;
     /* width: 90vw; */
+}
+.sidebar__seasons ol:active {
+    background-color: var(--dark-grey);
 }
 
 .sidebar__episodes {

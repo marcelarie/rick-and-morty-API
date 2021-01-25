@@ -24,7 +24,9 @@ const sidebar = {
                 .querySelectorAll('li')
 
             restOfEpisodes.forEach(episode => {
-                episode.classList.add('none')
+                if (!episode.classList.contains('none')) {
+                    episode.classList.toggle('none')
+                }
             })
             episodes.forEach(episode => {
                 episode.classList.toggle('none')

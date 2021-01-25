@@ -5,8 +5,8 @@ import {header} from './components/header/header.js'
 import {main} from './components/main/main.js'
 
 render.renderComponent(header.template, 'root');
+render.renderComponent(sidebar.template, 'root');
 render.renderComponent(main.template, 'root');
-render.renderComponent(sidebar.template, 'main');
 
 episodes.getSeasons();
 

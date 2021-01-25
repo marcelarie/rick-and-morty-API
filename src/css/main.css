@@ -2,6 +2,7 @@
 @import './header.css';
 @import './sidebar.css';
 @import './helpers.css';
+@import './characters.css';
 
 /* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;500;600;700&display=swap');
@@ -13,6 +14,14 @@
     --dark-grey: #373737;
 }
 
+* {
+    margin: unset;
+    padding: unset;
+    box-sizing: border-box;
+    text-decoration: unset;
+    color: unset;
+}
+
 body {
     background-color: var(--black);
     font-family: 'Chakra Petch', sans-serif;
@@ -20,4 +29,34 @@ body {
 
 main {
     display: flex;
+}
+
+main strong {
+    text-align: center;
+    background-color: var(--dark-grey);
+    color: var(--white);
+    font-size: 3em;
+    text-align: center;
+    width: 100%;
+}
+
+.main__episode {
+    flex: 1;
+    background-color: var(--dark-grey);
+    color: var(--white);
+}
+
+.episode__name {
+    font-size: 5em;
+    text-align: center;
+}
+.episode__air-date {
+    font-size: 3em;
+    text-align: center;
+    color: var(--grey);
+}
+
+.episode__characters {
+    display: flex;
+    flex-wrap: wrap;
 }
