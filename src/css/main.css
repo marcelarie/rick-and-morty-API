@@ -1,6 +1,7 @@
 /* @import './file.css'; */
 @import './header.css';
 @import './sidebar.css';
+@import './helpers.css';
 
 /* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;500;600;700&display=swap');
@@ -15,4 +16,8 @@
 body {
     background-color: var(--black);
     font-family: 'Chakra Petch', sans-serif;
+}
+
+main {
+    display: flex;
 }

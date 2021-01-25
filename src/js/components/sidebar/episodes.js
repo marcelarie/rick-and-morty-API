@@ -1,3 +1,5 @@
+import {sidebar} from './sidebar.js'
+
 let episodes = {
     name: 'episodes',
     seasons: {},
@@ -25,7 +27,7 @@ let episodes = {
     },
     renderSeasons: function () {
         Object.keys(this.seasons).forEach(season => {
-            const ol = `<ol id="${season}" class="">${season}</ol>`;
+            const ol = `<ol id="${season}" class="sidebar__season">${season}</ol>`;
             const sidebar = document.getElementById('sidebar__seasons');
             sidebar.insertAdjacentHTML('beforeend', ol);
 
@@ -34,16 +36,31 @@ let episodes = {
             episodes.forEach(episode => {
                 this.renderEpisodes(season, episode);
             })
+
+            // adding listeners
+            this.episodesListeners();
+            this.seasonsListeners();
         })
     },
     renderEpisodes: function (season, episode) {
         const li = `<li id="${episode.id}" 
-        class="sidebar__episodes"><span>${episode.id}.</span> ${episode.name}
+        class="sidebar__episodes none"><span>${episode.id}.</span> ${episode.name}
         </li>`;
 
         const ul = document.getElementById(season);
         ul.insertAdjacentHTML('beforeend', li);
     },
+    openEpisode: function () {
+        const main = document.getElementById('main')
+    },
+    seasonsListeners: function () {
+        document.getElementById('sidebar__seasons')
+            .addEventListener('click', sidebar.openSeason);
+    },
+    episodesListeners: function () {
+        document.getElementById('sidebar__seasons')
+            .addEventListener('click', sidebar.openEpisode);
+    }
 };
 
 export {episodes}

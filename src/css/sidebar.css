@@ -4,8 +4,8 @@
 }
 .sidebar__seasons {
     display: flex;
+    flex-direction: column;
     list-style: none;
-    justify-content: space-evenly;
 }
 .sidebar__seasons ol {
     border: 1px solid var(--white);
