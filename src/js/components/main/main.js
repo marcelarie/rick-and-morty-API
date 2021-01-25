@@ -30,7 +30,7 @@ const main = {
                 `<div class="character" id="${data.name}">
                 <img src="${data.image}" alt="${data.name}"/>
                 <h2 class="character__names">${data.name}</h2>
-                <p class="character__species">${data.species}</p>
+                <p class="character__species ${data.status.toLowerCase()}">${data.species}  <span>●</span></p>
             </div>`
             characterContainer.insertAdjacentHTML('beforeend', characterCard)
 

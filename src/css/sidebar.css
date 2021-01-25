@@ -2,6 +2,8 @@
     font-size: 1.2em;
     color: var(--white);
     float: left;
+    background-color: var(--dark-grey);
+    min-height: 100vh;
 }
 .sidebar__seasons {
     display: flex;
@@ -10,6 +12,7 @@
 }
 .sidebar__seasons ol {
     border: 1px solid var(--white);
+    background-color: var(--black);
     padding: 1.5em;
     list-style: none;
     text-align: center;

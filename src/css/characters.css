@@ -3,8 +3,27 @@
     flex: 1;
     padding: 1em;
     text-align: center;
+    cursor: pointer;
+}
+.character:hover > img {
+    filter: saturate(1.5);
+    border: 5px solid var(--grey);
+}
+.character__names { 
+    font-size: 1.3em;
 }
 .character img {
     width: 150px;
-    border-radius: 5px;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.dead span{
+    color: red;
+}
+.uknown span{
+    color: grey;
+}
+.alive span{
+    color: green;
 }
