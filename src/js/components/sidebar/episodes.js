@@ -1,4 +1,5 @@
 import {sidebar} from './sidebar.js'
+import {main} from '../main/main.js'
 
 let episodes = {
     name: 'episodes',
@@ -50,8 +51,11 @@ let episodes = {
         const ul = document.getElementById(season);
         ul.insertAdjacentHTML('beforeend', li);
     },
-    openEpisode: function () {
-        const main = document.getElementById('main')
+    openEpisode: function (episode) {
+        const url = `https://rickandmortyapi.com/api/episode/${episode.id}`
+        axios.get(url).then(({data}) => {
+            main.renderEpisode(data)
+        })
     },
     seasonsListeners: function () {
         document.getElementById('sidebar__seasons')

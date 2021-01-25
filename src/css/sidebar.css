@@ -12,6 +12,8 @@
     padding: 1.5em;
     list-style: none;
     text-align: center;
+    width: 15vw;
+    /* width: 90vw; */
 }
 
 .sidebar__episodes {
