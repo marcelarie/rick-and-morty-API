@@ -21,19 +21,35 @@ const main = {
         characters.forEach(character => {
             this.getCharacter(character);
         })
+        this.charactersListener();
     },
     getCharacter: function (character) {
         axios.get(character).then(({data}) => {
             const characterContainer = document.getElementById('episode__characters')
-            console.log(data)
             const characterCard =
-                `<div class="character" id="${data.name}">
-                <img src="${data.image}" alt="${data.name}"/>
-                <h2 class="character__names">${data.name}</h2>
-                <p class="character__species ${data.status.toLowerCase()}">${data.species}  <span>●</span></p>
+                `<div class="character" id="${data.id}">
+                <img class="child-click" src="${data.image}" alt="${data.name}"/>
+                <h2 class="character__names child-click">${data.name}</h2>
+                <p class="character__species child-click 
+            ${data.status.toLowerCase()}">${data.species}  <span>●</span></p>
             </div>`
             characterContainer.insertAdjacentHTML('beforeend', characterCard)
         })
+    },
+    openCharacter: function (event) {
+        if (event.target && event.target.classList
+            .contains('character')) {
+            const id = event.target.id;
+            const url = `https://rickandmortyapi.com/api/character/${id}`
+
+            axios.get(url).then(({data}) => {
+                console.log(data)
+            })
+        }
+    },
+    charactersListener: function () {
+        document.getElementById('episode__characters')
+            .addEventListener('click', this.openCharacter);
     }
 }
 
