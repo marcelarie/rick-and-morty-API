@@ -37,11 +37,13 @@ let episodes = {
         })
     },
     renderEpisodes: function (season, episode) {
-        const li = `<li id="${episode.id}" class="sidebar__episodes"><span>${episode.id}.</span> ${episode.name}</li>`;
+        const li = `<li id="${episode.id}" 
+        class="sidebar__episodes"><span>${episode.id}.</span> ${episode.name}
+        </li>`;
+
         const ul = document.getElementById(season);
         ul.insertAdjacentHTML('beforeend', li);
-    }
-
+    },
 };
 
 export {episodes}

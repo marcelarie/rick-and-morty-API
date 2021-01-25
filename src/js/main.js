@@ -8,3 +8,6 @@ render.renderComponent(sidebar.template, 'root');
 
 episodes.getSeasons();
 
+document.getElementById('sidebar__seasons')
+    .addEventListener('click', sidebar.openEpisode);
+

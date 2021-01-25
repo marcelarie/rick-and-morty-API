@@ -1,5 +1,5 @@
 .sidebar {
-    font-size: 1.1em;
+    font-size: 1.2em;
     color: var(--white);
 }
 .sidebar__seasons {
@@ -9,15 +9,20 @@
 }
 .sidebar__seasons ol {
     border: 1px solid var(--white);
-    padding: 1em;
+    padding: 1.5em;
     list-style: none;
     text-align: center;
 }
 
 .sidebar__episodes {
-    margin: 1em 0;
+    padding: 0.5em 0.3em;
+    cursor: pointer;
+}
+.sidebar__episodes:hover {
+    background-color: var(--dark-grey);
 }
 .sidebar__episodes span {
     font-weight: bold;
     color: var(--grey);
 }
+
