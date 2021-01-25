@@ -10,7 +10,7 @@ const main = {
         const episodeTemplate =
             `<section id="main__episode" class="main__episode">
                 <div class="episode__name">${data.id}. ${data.name}</div>
-                <div class="episode__air-date">Date of emission: ${data.air_date}</div>
+                <div class="episode__air-date">${data.air_date}</div>
                 <div id="episode__characters" class="episode__characters"></div>
             </section>`;
 
@@ -33,7 +33,6 @@ const main = {
                 <p class="character__species ${data.status.toLowerCase()}">${data.species}  <span>●</span></p>
             </div>`
             characterContainer.insertAdjacentHTML('beforeend', characterCard)
-
         })
     }
 }

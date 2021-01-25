@@ -47,11 +47,12 @@ main strong {
 }
 
 .episode__name {
-    font-size: 5em;
+    font-size: 2em;
     text-align: center;
+    margin: 0.3em;
 }
 .episode__air-date {
-    font-size: 3em;
+    font-size: 1.7em;
     text-align: center;
     color: var(--grey);
 }
@@ -59,4 +60,14 @@ main strong {
 .episode__characters {
     display: flex;
     flex-wrap: wrap;
+}
+
+@media (min-width: 1200px) {
+    .episode__name {
+        font-size: 4em;
+        text-align: center;
+    }
+    .episode__air-date {
+        font-size: 3em;
+    }
 }

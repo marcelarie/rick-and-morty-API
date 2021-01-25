@@ -1,9 +1,7 @@
 .sidebar {
     font-size: 1.2em;
     color: var(--white);
-    float: left;
     background-color: var(--dark-grey);
-    min-height: 100vh;
 }
 .sidebar__seasons {
     display: flex;
@@ -13,11 +11,9 @@
 .sidebar__seasons ol {
     border: 1px solid var(--white);
     background-color: var(--black);
-    padding: 1.5em;
+    padding: 1vh;
     list-style: none;
     text-align: center;
-    width: 15vw;
-    /* width: 90vw; */
 }
 .sidebar__seasons ol:active {
     background-color: var(--dark-grey);
@@ -33,5 +29,19 @@
 .sidebar__episodes span {
     font-weight: bold;
     color: var(--grey);
+}
+
+@media (min-width: 1200px) {
+    .sidebar {
+        float: left;
+        min-height: 100vh;
+        width: 15vw;
+    }
+    .sidebar__seasons {
+        position: fixed;
+    }
+    .sidebar__seasons ol {
+        width: 15vw;
+    }
 }
 
