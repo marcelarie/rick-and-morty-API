@@ -7,7 +7,17 @@
     list-style: none;
     justify-content: space-evenly;
 }
-.sidebar__seasons ul {
+.sidebar__seasons ol {
     border: 1px solid var(--white);
     padding: 1em;
+    list-style: none;
+    text-align: center;
+}
+
+.sidebar__episodes {
+    margin: 1em 0;
+}
+.sidebar__episodes span {
+    font-weight: bold;
+    color: var(--grey);
 }

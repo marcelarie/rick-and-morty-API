@@ -25,9 +25,9 @@ let episodes = {
     },
     renderSeasons: function () {
         Object.keys(this.seasons).forEach(season => {
-            const ul = `<ul id="${season}" class="">${season}</ul>`;
+            const ol = `<ol id="${season}" class="">${season}</ol>`;
             const sidebar = document.getElementById('sidebar__seasons');
-            sidebar.insertAdjacentHTML('beforeend', ul);
+            sidebar.insertAdjacentHTML('beforeend', ol);
 
             //renderEpisodes
             const episodes = this.seasons[season]
@@ -37,7 +37,7 @@ let episodes = {
         })
     },
     renderEpisodes: function (season, episode) {
-        const li = `<li id="${episode.id}" class="sidebar__episodes">${episode.name}</li>`;
+        const li = `<li id="${episode.id}" class="sidebar__episodes"><span>${episode.id}.</span> ${episode.name}</li>`;
         const ul = document.getElementById(season);
         ul.insertAdjacentHTML('beforeend', li);
     }
