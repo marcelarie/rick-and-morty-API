@@ -1,8 +1,13 @@
 .sidebar {
     font-size: 1.1em;
-    background-color: lightblue;
+    color: var(--white);
 }
-.sidebar__episodes {
+.sidebar__seasons {
     display: flex;
     list-style: none;
+    justify-content: space-evenly;
+}
+.sidebar__seasons ul {
+    border: 1px solid var(--white);
+    padding: 1em;
 }

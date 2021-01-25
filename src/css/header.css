@@ -1,10 +1,8 @@
-
 .header {
-    width: 100%;
-    border: 1px solid red;
+    color: var(--white);
 }
-
 
 .header__logo {
     font-size: 2em;
+    text-align: center;
 }

@@ -7,8 +7,10 @@
 
 :root {
     --black: #282828;
+    --white: #E0E0E0;
 }
 
 body {
+    background-color: var(--black);
     font-family: 'Chakra Petch', sans-serif;
 }
