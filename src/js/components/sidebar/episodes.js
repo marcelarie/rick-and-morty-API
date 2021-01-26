@@ -53,6 +53,7 @@ let episodes = {
     },
     openEpisode: function (episode) {
         const url = `https://rickandmortyapi.com/api/episode/${episode.id}`
+
         axios.get(url).then(({data}) => {
             main.renderEpisode(data)
         })

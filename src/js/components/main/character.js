@@ -32,8 +32,8 @@ const character = {
     renderCharacterMenu: function () {
         // main__episode
         const main = document.getElementById('character__container');
-        main.innerHTML = '';
-        main.insertAdjacentHTML('beforeend', this.template);
+        main.innerHTML = this.template;
+        // main.insertAdjacentHTML('beforeend', this.template);
     },
     renderLocation: function (event) {
         const url = event.target.getAttribute('data-url');

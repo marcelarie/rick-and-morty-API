@@ -1,5 +1,5 @@
-import {main} from '../main/main.js'
 import {episodes} from '../sidebar/episodes.js'
+
 
 const sidebar = {
     name: 'sidebar',

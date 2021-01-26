@@ -7,7 +7,6 @@ const main = {
         const characters = data.characters;
 
         const main = document.getElementById('main');
-        main.innerHTML = '';
 
         const episodeTemplate =
             `<section id="main__episode" class="main__episode">
@@ -17,13 +16,14 @@ const main = {
                 <div id="episode__characters" class="episode__characters"></div>
             </section>`;
 
-        main.insertAdjacentHTML('beforeend', episodeTemplate)
+        main.innerHTML = episodeTemplate;
         this.renderCharacters(characters)
     },
     renderCharacters: function (characters) {
         characters.forEach(character => {
             this.getCharacter(character);
         })
+
         this.charactersListener();
     },
     getCharacter: function (character) {
@@ -37,13 +37,18 @@ const main = {
             ${data.status.toLowerCase()}">${data.species}  <span>●</span></p>
             </div>`
             characterContainer.insertAdjacentHTML('beforeend', characterCard)
+        }).then(() => {
+            document.querySelector('#main').scrollIntoView({
+                behavior: 'smooth'
+            })
         })
+
     },
     openCharacter: function (event) {
         if (event.target && event.target.classList
             .contains('character')) {
             const id = event.target.id;
-            const url = `https://rickandmortyapi.com/api/character/${id}`
+            const url = `https://rickandmortyapi.com/api/character/${id}`;
 
             axios.get(url).then(({data}) => {
                 character.renderCharacter(data)
