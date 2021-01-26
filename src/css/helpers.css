@@ -15,3 +15,10 @@
 .child-click {
    pointer-events: none
 }
+
+.hide-text {
+    max-width: 7em;
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+}

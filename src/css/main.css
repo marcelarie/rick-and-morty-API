@@ -3,6 +3,7 @@
 @import './sidebar.css';
 @import './helpers.css';
 @import './characters.css';
+@import './character.css';
 
 /* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;500;600;700&display=swap');
@@ -12,6 +13,8 @@
     --white: #E0E0E0;
     --grey: #646464;
     --dark-grey: #373737;
+    --red: #C12828;
+    --green:#41C128 ;
 }
 
 * {

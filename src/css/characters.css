@@ -19,11 +19,14 @@
 }
 
 .dead span{
-    color: red;
+    color: var(--red);
+    font-size: 1.1em;
 }
 .uknown span{
-    color: grey;
+    color: var(--dark-grey);
+    font-size: 1.1em;
 }
 .alive span{
     color: green;
+    font-size: 1.1em;
 }

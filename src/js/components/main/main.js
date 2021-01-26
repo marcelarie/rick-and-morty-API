@@ -1,3 +1,5 @@
+import {character} from './character.js'
+
 const main = {
     name: 'main',
     template: ` <main id="main"><strong>WELCOME</strong></main> `,
@@ -11,6 +13,7 @@ const main = {
             `<section id="main__episode" class="main__episode">
                 <div class="episode__name">${data.id}. ${data.name}</div>
                 <div class="episode__air-date">${data.air_date}</div>
+                <div id="character__container" class="character__container"></div>
                 <div id="episode__characters" class="episode__characters"></div>
             </section>`;
 
@@ -43,7 +46,7 @@ const main = {
             const url = `https://rickandmortyapi.com/api/character/${id}`
 
             axios.get(url).then(({data}) => {
-                console.log(data)
+                character.renderCharacter(data)
             })
         }
     },
