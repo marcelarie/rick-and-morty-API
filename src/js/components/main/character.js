@@ -5,7 +5,14 @@ const character = {
         </div>`,
     renderCharacter: function (data) {
         this.renderCharacterMenu()
+
+        // scroll to main
+        document.querySelector('#main').scrollIntoView({
+            behavior: 'smooth'
+        })
+
         console.log(data)
+
         const characterMenu = document.getElementById('character__menu')
         const menu = `<div id="${data.id}" class="character__menu__card">
         <div class="character__menu__card__left">
@@ -32,6 +39,7 @@ const character = {
     renderCharacterMenu: function () {
         // main__episode
         const main = document.getElementById('character__container');
+
         main.innerHTML = this.template;
         // main.insertAdjacentHTML('beforeend', this.template);
     },

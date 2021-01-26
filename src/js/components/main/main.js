@@ -38,6 +38,7 @@ const main = {
             </div>`
             characterContainer.insertAdjacentHTML('beforeend', characterCard)
         }).then(() => {
+            // scroll to main
             document.querySelector('#main').scrollIntoView({
                 behavior: 'smooth'
             })
