@@ -14,10 +14,23 @@
     padding: 1em 0;
 }
 
-.character__menu__card__right {
+.character__menu__card__right span {
+    font-weight: normal;
+    color: var(--white);
+}
+.character__menu__card__right button {
+    all: unset;
+    cursor: pointer;
+    font-weight: normal;
+    color: var(--white);
+    text-decoration: underline;
+}
+.character__menu__card__right button:hover {
+    opacity: 0.7;
 }
 .character__menu__card__right p {
-    color: var(--white);
+    color: var(--light-grey);
+    font-weight: bold;
     font-size: 1.1em;
 }
 .character__menu__card__left h2{
@@ -30,3 +43,4 @@
     border-radius: 3px;
     width:200px
 }
+
