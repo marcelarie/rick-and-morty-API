@@ -16,7 +16,8 @@ const character = {
             <p>Status: <span>${data.status}</span></p>
             <p>Species: <span>${data.species}</span></p>
             <p>Gender: <span>${data.gender}</span></p>
-            <p>Origin: <button data-url='${data.origin.url}'>${data.origin.name}</button></p>
+            <p>Origin: <button id="location-button" 
+            data-url='${data.origin.url}'>${data.origin.name}</button></p>
         </div>
         <div class="character__menu__location">
             <div class="location__name"></div>
@@ -26,12 +27,21 @@ const character = {
         </div>
         </div>`
         characterMenu.insertAdjacentHTML('beforeend', menu);
+        this.locationListener();
     },
     renderCharacterMenu: function () {
         // main__episode
         const main = document.getElementById('character__container');
         main.innerHTML = '';
         main.insertAdjacentHTML('beforeend', this.template);
+    },
+    renderLocation: function (event) {
+        const url = event.target.getAttribute('data-url');
+        console.log(url)
+    },
+    locationListener: function () {
+        document.getElementById('location-button')
+            .addEventListener('click', this.renderLocation)
     }
 }
 
